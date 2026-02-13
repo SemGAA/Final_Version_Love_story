@@ -250,6 +250,28 @@
                 <p>Мы были там совсем одни... Свежий воздух, высота и моя самая любимая девочка рядом.</p>
             </div>
 
+            <div class="photo-card vertical with-hearts">
+                <div class="media-container">
+                    <img src="image_0.png" alt="Моя тигрица">
+                </div>
+                <h4>Моя тигрица</h4>
+                <p>Твой взгляд и эти коготки... Ты сводишь меня с ума своей красотой и характером.</p>
+            </div>
+
+            <div class="photo-card horizontal with-hearts">
+                <div class="media-container">
+                    <img src="image_1.png" alt="Магия любви">
+                </div>
+                <h4>Магия любви</h4>
+                <p>В этот момент для нас существовали только мы вдвоем. Самый волшебный поцелуй.</p>
+            </div>
+            <div class="photo-card standard with-hearts">
+                <div class="media-container">
+                    <img src="image_2.png" alt="Игривая">
+                </div>
+                <h4>Игривое настроение</h4>
+                <p>Обожаю, когда ты такая! Твоя улыбка - лучшее лекарство от любого плохого дня.</p>
+            </div>
             <div class="photo-card standard">
                 <div class="media-container">
                     <img src="photo_2026-02-10_19-04-41.jpg" alt="Милашка">
@@ -257,7 +279,6 @@
                 <h4>Просто люблю</h4>
                 <p>Мне так нравится эта фоточка, ты здесь такая милая. Не могу перестать улыбаться, глядя на неё.</p>
             </div>
-
             <div class="photo-card">
                 <div class="cat-disco">
                     <video class="auto-video" src="video_2.mp4" loop muted playsinline></video>
@@ -265,30 +286,6 @@
                 </div>
                 <h4>Танцы от Алиски и Юки</h4>
                 <p>Даже котики празднуют! Они тоже знают, как сильно я тебя люблю.</p>
-            </div>
-
-            <div class="photo-card vertical with-hearts">
-                <div class="media-container">
-                    <img src="image_0.png" alt="Моя хищница">
-                </div>
-                <h4>Моя хищница</h4>
-                <p>Твой взгляд и эти коготки... Ты сводишь меня с ума своей красотой и характером.</p>
-            </div>
-
-            <div class="photo-card horizontal with-hearts">
-                <div class="media-container">
-                    <img src="image_1.png" alt="Магия ночи">
-                </div>
-                <h4>Магия ночи</h4>
-                <p>В этот момент для нас существовали только мы вдвоем. Самый волшебный поцелуй под звездами.</p>
-            </div>
-
-            <div class="photo-card standard with-hearts">
-                <div class="media-container">
-                    <img src="image_2.png" alt="Игривое настроение">
-                </div>
-                <h4>Игривое настроение</h4>
-                <p>Обожаю, когда ты такая! Твоя улыбка и подмигивание — лучшее лекарство от любого плохого дня.</p>
             </div>
 
         </section>
@@ -389,7 +386,7 @@
         const reasons = [
     "Твоя улыбка", 
     "Твоя забота", 
-    "Ты — мой лучший друг", 
+    "Ты - мой лучший друг", 
     "Твой смех", 
     "То, как ты смотришь на меня", 
     "Твоего дракона", 
@@ -408,7 +405,7 @@
     "Наши бесконечные разговоры",
     "Твою искренность и честность",
     "Запах твоих волос",
-    "За то, что ты — это просто ты"
+    "За то, что ты - это просто ты"
 ];        function generateLove() {
             vibro(40);
             document.getElementById('reason-text').innerText = reasons[Math.floor(Math.random() * reasons.length)];
@@ -443,3 +440,4 @@ function nextQuest(id, ...correctAnswers) {
     </script>
 </body>
 </html>
+
