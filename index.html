@@ -102,11 +102,13 @@
             opacity: 0;
             transform: translateY(40px);
             transition: 0.8s ease-out;
+            position: relative; /* Для позиционирования сердечек */
+            overflow: visible; /* Чтобы сердечки могли вылетать */
         }
         .photo-card.visible { opacity: 1; transform: translateY(0); }
 
         /* Стили для разных типов медиа */
-        .media-container { width: 100%; border-radius: 18px; overflow: hidden; background: #eee; }
+        .media-container { width: 100%; border-radius: 18px; overflow: hidden; background: #eee; position: relative; }
         
         .media-container video, .media-container img {
             width: 100%;
@@ -129,6 +131,50 @@
             margin-top: 15px;
         }
         .cat-disco video { border-radius: 12px; width: 100%; }
+
+        /* Анимация сердечек */
+        .with-hearts::before,
+        .with-hearts::after,
+        .with-hearts .media-container::before,
+        .with-hearts .media-container::after {
+            content: '❤';
+            position: absolute;
+            font-size: 24px;
+            color: var(--accent);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .with-hearts::before {
+            top: -10px; left: 10%;
+            animation: float-hearts 3s ease-in-out infinite;
+        }
+        .with-hearts::after {
+            top: -15px; right: 15%;
+            animation: float-hearts 3.5s ease-in-out infinite 0.5s;
+        }
+        .with-hearts .media-container::before {
+            bottom: 10px; left: 5%;
+            animation: float-hearts 4s ease-in-out infinite 1s;
+        }
+        .with-hearts .media-container::after {
+            bottom: 15px; right: 10%;
+            animation: float-hearts 4.5s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes float-hearts {
+            0% {
+                transform: translateY(0) scale(0.8) rotate(0deg);
+                opacity: 0;
+            }
+            20% { opacity: 1; }
+            100% {
+                transform: translateY(-60px) scale(1.2) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
 
         /* Квест */
         .quest-section { padding: 60px 20px; text-align: center; background: white; border-radius: 40px; margin-top: 50px; }
@@ -219,6 +265,30 @@
                 </div>
                 <h4>Танцы от Алиски и Юки</h4>
                 <p>Даже котики празднуют! Они тоже знают, как сильно я тебя люблю.</p>
+            </div>
+
+            <div class="photo-card vertical with-hearts">
+                <div class="media-container">
+                    <img src="image_0.png" alt="Моя хищница">
+                </div>
+                <h4>Моя хищница</h4>
+                <p>Твой взгляд и эти коготки... Ты сводишь меня с ума своей красотой и характером.</p>
+            </div>
+
+            <div class="photo-card horizontal with-hearts">
+                <div class="media-container">
+                    <img src="image_1.png" alt="Магия ночи">
+                </div>
+                <h4>Магия ночи</h4>
+                <p>В этот момент для нас существовали только мы вдвоем. Самый волшебный поцелуй под звездами.</p>
+            </div>
+
+            <div class="photo-card standard with-hearts">
+                <div class="media-container">
+                    <img src="image_2.png" alt="Игривое настроение">
+                </div>
+                <h4>Игривое настроение</h4>
+                <p>Обожаю, когда ты такая! Твоя улыбка и подмигивание — лучшее лекарство от любого плохого дня.</p>
             </div>
 
         </section>
